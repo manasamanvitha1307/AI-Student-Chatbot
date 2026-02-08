@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECE Paris AI Chatbot</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+        <div class="chat-header-info">
+
+            <!-- Your working ECE Logo -->
+            <img src="https://static.wixstatic.com/media/2565f3_0af5803f7b6a432384ba4c8fe3312ad3~mv2.png" class="chat-logo">
+
+            <div>
+                <h2>ECE Paris AI Chatbot</h2>
+                <p>Your friendly assistant for programs, admissions & campus life</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-body" id="chat-body"></div>
+
+    <div id="typing-indicator" class="typing hidden">
+        <span></span><span></span><span></span>
+    </div>
+
+    <div class="chat-footer">
+        <input id="user-input" type="text" placeholder="Type your message…">
+        <button id="send-btn">➤</button>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

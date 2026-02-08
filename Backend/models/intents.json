@@ -1,0 +1,406 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi", "hello", "hey", "good morning", "good afternoon",
+        "good evening", "hi there", "hello chatbot", "hey bot"
+      ],
+      "responses": [
+        "Hey! How can I help you today?",
+        "Hi there! What would you like to know about ECE Paris?",
+        "Hello! Feel free to ask me anything about programs, campus life, or admissions."
+      ]
+    },
+
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you", "talk to you later", "catch you later"],
+      "responses": [
+        "See you soon! Have a great day.",
+        "Bye! Reach out anytime you need help.",
+        "Take care! I'm here whenever you need me."
+      ]
+    },
+
+    {
+      "tag": "thanks",
+      "patterns": ["thank you", "thanks", "thanks a lot", "thank you so much", "appreciate it"],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "Anytime — that's what I'm here for."
+      ]
+    },
+
+    {
+      "tag": "clarification",
+      "patterns": [
+        "explain more", "tell me more", "can you explain", "can you elaborate",
+        "more details please", "I want more information", "explain in detail"
+      ],
+      "responses": [
+        "Sure! Which topic should I go deeper into — programs, admissions, fees, or campus life?",
+        "Of course! Tell me what part you'd like more details about.",
+        "Happy to explain — just let me know the topic."
+      ]
+    },
+
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": [
+        "Hmm, I’m not sure I understood that. Try asking about programs, admissions, fees, or campus life.",
+        "I didn’t quite get that. Could you rephrase it?",
+        "Sorry, I’m not sure what you mean — want to try asking in a different way?"
+      ]
+    },
+        {
+      "tag": "engineering_cycle",
+      "patterns": [
+        "engineering cycle", "ingénieur program", "5 year program", 
+        "engineering degree", "cycle ingénieur", "ECE engineering"
+      ],
+      "responses": [
+        "The Engineering Cycle at ECE Paris is a 5‑year program split into a 2‑year preparatory cycle and a 3‑year engineering cycle. You can choose majors like AI, Cybersecurity, Data, Embedded Systems, Networks, and more.",
+        "ECE Paris offers a full Engineering Cycle with strong industry connections and modern labs. You can specialize in areas like AI, Cyber, Data, IoT, and software engineering.",
+        "The Engineering Cycle is one of ECE’s flagship programs, combining technical courses, projects, internships, and international mobility."
+      ],
+      "context_set": "engineering_info"
+    },
+
+    {
+      "tag": "preparatory_cycle",
+      "patterns": [
+        "preparatory cycle", "prepa", "prepa integrated", "first two years", 
+        "preparatory program", "cycle préparatoire"
+      ],
+      "responses": [
+        "The Preparatory Cycle (Prépa intégrée) covers the first two years of the Engineering Cycle. You’ll learn math, physics, programming, and engineering fundamentals.",
+        "ECE’s Prépa intégrée prepares you for the engineering cycle with strong foundations in science and digital technologies.",
+        "The preparatory cycle includes projects, labs, and personalized academic support to help you succeed in the engineering cycle."
+      ],
+      "context_set": "prepa_info"
+    },
+
+    {
+      "tag": "bachelor_programs",
+      "patterns": [
+        "bachelor programs", "bachelor degree", "ECE bachelor", 
+        "undergraduate programs", "bachelor in computer science", 
+        "bachelor in cybersecurity", "bachelor in data"
+      ],
+      "responses": [
+        "ECE Paris offers Bachelor programs in Computer Science, Cybersecurity, and Data & AI. These are 3‑year programs focused on practical skills and industry readiness.",
+        "Bachelor programs at ECE are hands‑on and career‑oriented, with opportunities for internships and international mobility.",
+        "You can choose Bachelor tracks like Cybersecurity, Data & AI, or Computer Science depending on your interests."
+      ],
+      "context_set": "bachelor_info"
+    },
+
+    {
+      "tag": "msc_programs",
+      "patterns": [
+        "msc programs", "master of science", "ECE msc", 
+        "msc in data science", "msc in cybersecurity", 
+        "msc in cloud computing", "msc in ai", "msc in robotics"
+      ],
+      "responses": [
+        "ECE Paris offers MSc programs in Data Science, Cybersecurity, Cloud Computing, AI & Robotics, and IoT & Smart Systems. These programs are taught in English and open to international students.",
+        "MSc programs at ECE are designed for specialization and career acceleration, with strong industry partnerships.",
+        "If you're looking for advanced studies, ECE’s MSc programs offer modern labs, expert faculty, and project‑based learning."
+      ],
+      "context_set": "msc_info"
+    },
+
+    {
+      "tag": "international_programs",
+      "patterns": [
+        "international programs", "exchange program", "erasmus", 
+        "dual degree", "study abroad", "international mobility"
+      ],
+      "responses": [
+        "ECE Paris has strong international mobility options, including Erasmus+, exchange programs, dual degrees, and English‑taught tracks.",
+        "You can study abroad for a semester or a full year through ECE’s international partnerships.",
+        "ECE welcomes international students and offers dedicated support for visas, housing, and integration."
+      ],
+      "context_set": "international_info"
+    },
+
+    {
+      "tag": "alternance",
+      "patterns": [
+        "alternance", "work study", "apprenticeship", "ECE alternance", 
+        "study and work", "alternance program"
+      ],
+      "responses": [
+        "ECE Paris offers alternance (work‑study) options in the Engineering Cycle, Bachelor programs, and some MSc programs. It’s a great way to gain experience while studying.",
+        "Alternance lets you split your time between classes and working in a company. Many students get job offers afterward.",
+        "ECE’s alternance programs are popular because they combine academic learning with real industry experience."
+      ],
+      "context_set": "alternance_info"
+    },
+        {
+      "tag": "admissions",
+      "patterns": [
+        "admissions", "how to apply", "application process", 
+        "admission requirements", "how to join ece", "apply to ece"
+      ],
+      "responses": [
+        "Admissions at ECE Paris depend on the program. You can apply online through the official website. Engineering Cycle, Bachelor, MSc, and international programs each have their own requirements.",
+        "To apply, you’ll need academic transcripts, ID documents, and sometimes an interview depending on the program.",
+        "ECE Paris accepts applications from both French and international students. The admissions team is super friendly if you need help."
+      ],
+      "context_set": "admissions_info"
+    },
+
+    {
+      "tag": "fees",
+      "patterns": [
+        "fees", "tuition fees", "how much does it cost", 
+        "fee structure", "program fees", "annual fees"
+      ],
+      "responses": [
+        "Tuition fees vary by program. Engineering Cycle is usually around €9,000–€11,000 per year. Bachelor programs are around €7,000–€9,000. MSc programs range from €10,000–€13,000 depending on the specialization.",
+        "Alternance students often have reduced fees because companies cover part of the cost.",
+        "Fees can vary each year, so it’s always good to check the official website for the latest updates."
+      ],
+      "context_set": "fees_info"
+    },
+
+    {
+      "tag": "scholarships",
+      "patterns": [
+        "scholarships", "financial aid", "fee reduction", 
+        "scholarship eligibility", "help with fees"
+      ],
+      "responses": [
+        "ECE Paris offers several financial aid options, including merit‑based scholarships and government support for eligible students.",
+        "International students can also apply for certain scholarships depending on their profile.",
+        "If you need help with fees, the admissions team can guide you through available scholarship options."
+      ],
+      "context_set": "scholarship_info"
+    },
+        {
+      "tag": "housing",
+      "patterns": [
+        "housing", "accommodation", "student housing", 
+        "hostel", "residence", "where to stay"
+      ],
+      "responses": [
+        "ECE Paris doesn’t have on‑campus housing, but there are many student residences near both the Paris and Lyon campuses.",
+        "You can find housing through CROUS, private residences, or shared apartments. The international office can help you get started.",
+        "Most students live in nearby neighborhoods with easy transport access."
+      ],
+      "context_set": "housing_info"
+    },
+
+    {
+      "tag": "transport",
+      "patterns": [
+        "transport", "bus", "metro", "how to reach campus", 
+        "transportation", "commute"
+      ],
+      "responses": [
+        "The Paris campus is well connected by metro, tram, and bus. The Lyon campus also has excellent public transport access.",
+        "Most students use public transport, bikes, or shared mobility services to reach campus.",
+        "Both campuses are located in central, easy‑to‑reach areas."
+      ],
+      "context_set": "transport_info"
+    },
+
+    {
+      "tag": "library",
+      "patterns": [
+        "library", "library hours", "books", "digital library", 
+        "study space", "library services"
+      ],
+      "responses": [
+        "ECE Paris has a modern library with study spaces, digital resources, and access to academic journals.",
+        "You can use the digital library for research, e‑books, and online databases.",
+        "The library is a great place to study quietly or work on group projects."
+      ],
+      "context_set": "library_info"
+    },
+
+    {
+      "tag": "labs",
+      "patterns": [
+        "labs", "research labs", "cyber lab", "ai lab", 
+        "iot lab", "ece labs"
+      ],
+      "responses": [
+        "ECE Paris has specialized labs for AI, Cybersecurity, IoT, Robotics, Embedded Systems, and more.",
+        "Students get hands‑on experience in modern labs equipped with industry‑grade tools.",
+        "If you love practical learning, you’ll enjoy the lab‑based projects at ECE."
+      ],
+      "context_set": "labs_info"
+    },
+
+    {
+      "tag": "it_support",
+      "patterns": [
+        "it support", "wifi", "technical help", 
+        "computer issues", "network problems"
+      ],
+      "responses": [
+        "The IT support team can help with Wi‑Fi, accounts, software access, and technical issues.",
+        "If you have trouble logging in or connecting, the IT desk is super responsive.",
+        "You can contact IT support through the student portal."
+      ],
+      "context_set": "it_info"
+    },
+
+    {
+      "tag": "cafeteria",
+      "patterns": [
+        "cafeteria", "canteen", "food", "lunch", 
+        "where to eat", "meal options"
+      ],
+      "responses": [
+        "Both campuses have cafeterias and plenty of food options nearby — from quick snacks to full meals.",
+        "Students often hang out in cafés around the campus for lunch or coffee breaks.",
+        "You’ll find vegetarian and international food options around the area."
+      ],
+      "context_set": "cafeteria_info"
+    },
+        {
+      "tag": "student_clubs",
+      "patterns": [
+        "clubs", "student clubs", "associations", 
+        "student groups", "activities", "extracurricular"
+      ],
+      "responses": [
+        "ECE Paris has tons of student clubs — robotics, gaming, entrepreneurship, arts, sports, and more.",
+        "Joining a club is a great way to make friends and build skills outside class.",
+        "There’s something for everyone — tech, culture, sports, and creative clubs."
+      ],
+      "context_set": "clubs_info"
+    },
+
+    {
+      "tag": "sports",
+      "patterns": [
+        "sports", "gym", "fitness", "sports facilities", 
+        "sports activities", "sports clubs"
+      ],
+      "responses": [
+        "ECE students can join sports teams and access fitness facilities through partner organizations.",
+        "Popular sports include football, basketball, volleyball, and fitness training.",
+        "Sports events and tournaments happen throughout the year."
+      ],
+      "context_set": "sports_info"
+    },
+
+    {
+      "tag": "events",
+      "patterns": [
+        "events", "festivals", "student events", 
+        "campus events", "what's happening", "activities"
+      ],
+      "responses": [
+        "ECE Paris hosts events like hackathons, workshops, cultural festivals, and student parties.",
+        "There’s always something happening — tech events, club activities, and networking sessions.",
+        "You can check the student portal or club pages for upcoming events."
+      ],
+      "context_set": "events_info"
+    },
+        {
+      "tag": "internships",
+      "patterns": [
+        "internships", "stages", "how to get internship", 
+        "internship help", "internship opportunities"
+      ],
+      "responses": [
+        "ECE Paris has strong industry connections, and students complete internships during their studies.",
+        "The career services team helps with CVs, interviews, and finding internship opportunities.",
+        "Many students find internships in tech companies, startups, and engineering firms."
+      ],
+      "context_set": "internship_info"
+    },
+
+    {
+      "tag": "placements",
+      "patterns": [
+        "placements", "jobs", "career opportunities", 
+        "placement record", "companies visiting"
+      ],
+      "responses": [
+        "ECE Paris has excellent placement outcomes, especially in tech fields like AI, Cybersecurity, Data, and Software Engineering.",
+        "Graduates work at companies like Capgemini, Thales, Orange, Airbus, Atos, and many startups.",
+        "The career services team organizes job fairs, networking events, and company meetups."
+      ],
+      "context_set": "placement_info"
+    },
+        {
+      "tag": "exams",
+      "patterns": [
+        "exams", "exam schedule", "exam timetable", 
+        "when are exams", "exam details"
+      ],
+      "responses": [
+        "Exams follow the academic calendar and include continuous assessments, midterms, and finals.",
+        "You can find exam schedules on the student portal.",
+        "Each program has its own exam structure, but everything is clearly explained in the course guide."
+      ],
+      "context_set": "exam_info"
+    },
+
+    {
+      "tag": "results",
+      "patterns": [
+        "results", "grades", "marks", "exam results", 
+        "how to check results"
+      ],
+      "responses": [
+        "You can check your results on the student portal once they’re published.",
+        "Grades are usually released a few weeks after exams.",
+        "If you have questions about grades, your academic advisor can help."
+      ],
+      "context_set": "results_info"
+    },
+
+    {
+      "tag": "academic_calendar",
+      "patterns": [
+        "academic calendar", "holidays", "vacation", 
+        "semester dates", "important dates"
+      ],
+      "responses": [
+        "The academic calendar includes semester dates, holidays, and exam periods. You can find it on the official website.",
+        "Each program follows a structured academic calendar with clear timelines.",
+        "If you need specific dates, the student portal has the latest version."
+      ],
+      "context_set": "calendar_info"
+    },
+        {
+      "tag": "campus_info",
+      "patterns": [
+        "campus", "campus location", "where is ece", 
+        "paris campus", "lyon campus"
+      ],
+      "responses": [
+        "ECE Paris has two campuses — one in Paris and one in Lyon. Both are located in central, accessible areas.",
+        "The Paris campus is in the 15th arrondissement, and the Lyon campus is in the Confluence district.",
+        "Both campuses offer modern facilities, labs, and student spaces."
+      ],
+      "context_set": "campus_info"
+    },
+
+    {
+      "tag": "contact",
+      "patterns": [
+        "contact", "contact details", "how to contact", 
+        "email", "phone", "support"
+      ],
+      "responses": [
+        "You can contact ECE Paris through the official website’s contact page. They’ll direct you to the right department.",
+        "For program‑specific questions, the admissions team is super helpful.",
+        "If you need help as a student, the student services office is your go‑to place."
+      ],
+      "context_set": "contact_info"
+    }
+  ]
+}
+
+
